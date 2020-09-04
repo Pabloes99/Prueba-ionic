@@ -1,0 +1,71 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-title>Login</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-img src="./assets/icon/logo.png" style="width: 100px" style="height: 100px"></ion-img>
+
+    <ion-item>
+        <ion-icon src="./assets/icon/correo.svg" slot="start"></ion-icon>
+        <ion-input type="text" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-icon src="./assets/icon/bloquear.svg" slot="start"></ion-icon>
+        <ion-input type="password" [(ngModel)]="user.password" placeholder="Password"></ion-input>
+    </ion-item>
+
+    <ion-item-group>
+        <ion-button color="secondary" shape="round" size="large" expand="block" (click)="login()">Log in</ion-button>
+        <ion-item-group align="center">
+            <a routerLink="/register">Or sign up here!</a>
+        </ion-item-group>
+    </ion-item-group>
+
+</ion-content>
+
+
+<!--
+    <ion-img src="./assets/icon/logo.png" style="width: 100px" style="height: 100px"></ion-img>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <ion-list>
+            <ion-item>
+                <ion-icon src="./assets/icon/correo.svg" slot="start"></ion-icon>
+                <ion-input formControlName="userEmail" placeholder="Email" type="email" autocapitalize="off" autocomplete="off" autocorrect="off"></ion-input>
+            </ion-item>
+
+
+            <ion-item>
+                <ion-icon src="./assets/icon/bloquear.svg" slot="start"></ion-icon>
+                <ion-input placeholder="Password" formControlName="userPassword" type="password"></ion-input>
+            </ion-item>
+
+            <ion-item *ngIf="loginFormValidator.userPassword.empty">
+                <ion-label text-wrap color="danger">
+                    {{ loginFormValidator.userPassword.empty }}
+                </ion-label>
+            </ion-item>
+
+            <ion-item *ngIf="loginFormValidator.userEmail.empty">
+                <ion-label text-wrap color="danger">
+                    {{ loginFormValidator.userEmail.empty }}
+                </ion-label>
+            </ion-item>
+
+            <ion-item *ngIf="loginFormValidator.userEmail.email">
+                <ion-label text-wrap color="danger">
+                    {{ loginFormValidator.userEmail.email }}
+                </ion-label>
+            </ion-item>
+
+        </ion-list>
+
+        <ion-button color="secondary" shape="round" size="large" expand="block" (click)="onSubmit()">Log in</ion-button>
+        <ion-item-group align="center">
+            <a routerLink="/register">Or sign up here!</a>
+        </ion-item-group>
+    </form>
+-->
